@@ -1,22 +1,18 @@
 <h2>Burgers to Eat</h2>
 
-<ul>
   {{#each burger}}
     {{#unless devoured}}
     {{> burgers/burger-block devoured=false}}
     {{/unless}}
   {{/each}}
-</ul>
 
 <h2>Eaten Burgers</h2>
 
-<ul>
   {{#each burger}}
     {{#if devoured}}
     {{> burgers/burger-block devoured=true}}
     {{/if}}
   {{/each}}
-</ul>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
