@@ -1,15 +1,11 @@
 .jumbotron {
-  background-image: "/public/assets/images/watercolour-2053269_1920.jpg" !important;
+  background-image: url("/assets/images/watercolour2.jpg") !important; 
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  height: 100% !important;
-  color: pink;
-  background-color: pink !important;
+  height: 100vh;
+  margin-bottom: 0;
 }
 
-#hotpink {
-  color: hotpink;
-}
 
 .label {
   font-weight: bold;

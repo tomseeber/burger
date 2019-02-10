@@ -7,7 +7,7 @@ var burger = {
       });
     },
     insertOne: function(vals, cb) {
-      orm.create(vals, function(res) {
+      orm.insertOne(vals, function(res) {
         cb(res);
       });
     },

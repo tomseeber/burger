@@ -22,22 +22,21 @@ router.get("/", function(req, res) {
     //   [
     //   "burger_name", "devoured"
     // ], 
-    [
-      req.body.burger_name, req.body.devoured
-    ], function(result) {
+    
+      req.body.burger_name, function(result) {
       // Send back the ID of the new burger
-      console.log(res.json({ id: result.insertId }));
+      console.log(res.json({ burger_name: result.burger_name }));
     });
   });
   
-  router.put("/api/burger/:id", function(req, res) {
-    var condition = "id = " + req.params.id;
+  router.put("/api/burger/:burger_name", function(req, res) {
+    // var condition = "id = " + req.params.id;
+    // var condition = "burger_name =" +req.params.burger_name;
   
-    console.log("condition", condition);
+    // console.log("condition", condition);
   
-    burger.updateOne({
-     devoured: req.body.devoured
-    }, condition, function(result) {
+    burger.updateOne(
+     req.body.burger_name, function(result) {
       if (result.changedRows == 0) {
         // If no rows were changed, then the ID must not exist, so 404
         return res.status(404).end();
