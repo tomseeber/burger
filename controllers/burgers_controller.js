@@ -33,7 +33,7 @@ router.get("/", function(req, res) {
     // var condition = "id = " + req.params.id;
     // var condition = "burger_name =" +req.params.burger_name;
   
-    // console.log("condition", condition);
+    console.log(req.body, "req.body");
   
     burger.updateOne(
      req.body.burger_name, function(result) {

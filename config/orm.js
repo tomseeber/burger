@@ -11,12 +11,17 @@ var orm = {
         });
     },
     insertOne: function(vals, cb, table="burgers", cols=["burger_name", "devoured"]) {
-      console.log(vals.length);
-      if (vals.length === 1) {
-        // console.log('vals.length is 1')
-        vals.push(false);
+      var array = [];
+      console.log(vals, "vals");
+      array.push(vals);
+      console.log(array, "array");
+      // vals.join('');
+      console.log(array.length, "array length");
+      if (array.length === 1) {
+        array.push(false);
+        console.log(array, "array");
       }
-      vals = `"${vals[0]}", ${vals[1]}`
+      vals = `"${array[0]}", ${array[1]}`
       var queryString = `INSERT INTO ${table} (${cols.toString()}) VALUES (${vals}) ;`;
         console.log(queryString);
         connection.query(queryString, function(err, result) {
@@ -28,7 +33,13 @@ var orm = {
       },
 
       updateOne: function(vals, cb, table="burgers", cols=["burger_name", "devoured"]) {
-        var queryString = `UPDATE ${table} SET devoured = true WHERE  burger_name = "${vals[0]}";`;
+      var array = [];
+      console.log(vals, "vals");
+      array.push(vals);
+      console.log(array, "array");
+      // vals.join('');
+      console.log(array.length, "array length");
+        var queryString = `UPDATE ${table} SET devoured = true WHERE burger_name = "${array[0]}";`;
           console.log(queryString);
           connection.query(queryString, function(err, result) {
             if (err) {
