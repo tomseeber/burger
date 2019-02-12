@@ -14,7 +14,6 @@ router.get("/", function(req, res) {
       console.log(burgerObject);
       res.render("index", burgerObject);
     });
-    // res.send("Laura the Barbarian Conquerer");
   });
   
   router.post("/api/burger", function(req, res) {
