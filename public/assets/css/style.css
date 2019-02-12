@@ -1,7 +1,7 @@
 .jumbotron {
   background-image: url("/assets/images/watercolour2.jpg") !important; 
   background-size: cover !important;
-  background-repeat: no-repeat !important;
+  /* background-repeat: no-repeat !important; */
   height: 100vh;
   margin-bottom: 0;
 }
