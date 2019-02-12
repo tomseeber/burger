@@ -6,6 +6,18 @@
   margin-bottom: 0;
 }
 
+.bg-warning {
+  background-color: #444c6c !important;
+  color: white; 
+}
+
+.btn-light {
+  background-color: #fc3200;
+}
+
+.btn-dark {
+  background-color: #fbc005;
+}
 
 .label {
   font-weight: bold;
