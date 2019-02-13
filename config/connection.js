@@ -14,7 +14,7 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     user: "root",
     password: process.env.DB_PASS,
-    database: JAWSDB_URL
+    database: process.env.DB
   });
 };
 
